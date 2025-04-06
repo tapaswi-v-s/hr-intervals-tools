@@ -37,7 +37,7 @@ def download_zip(zip_file):
     <html>
     <head>
     <title>Start Auto Download file</title>
-    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script>
     $('<a href="data:application/zip;base64,{b64}" download="{zip_file}">')[0].click()
     </script>
