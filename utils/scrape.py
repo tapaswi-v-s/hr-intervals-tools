@@ -2,6 +2,7 @@ from firecrawl import FirecrawlApp
 import os, json, argparse
 from tqdm import tqdm
 import shutil
+import time
 
 class Scrape:
     def __init__(self, file_path, api_key):
@@ -41,11 +42,6 @@ class Scrape:
                 title = ''.join(e for e in title if e.isalnum() or e == '_')
 
                 
-                try:
-                    shutil.rmtree('./json')
-                    shutil.rmtree('./md')
-                except FileNotFoundError:
-                    pass
                 os.makedirs('./json', exist_ok=True)
                 os.makedirs('./md', exist_ok=True)
 

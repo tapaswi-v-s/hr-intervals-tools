@@ -15,19 +15,6 @@ def download(file_name):
         height=0
     )
 
-@st.dialog("Confirmation")
-def confirmation_dialog():
-    st.write("Are you sure you want to proceed with scraping?")
-    col1, col2 = st.columns(2)
-    with col1:
-        if st.button('', icon='✅'):
-            st.session_state.proceed_scraping = True
-            st.rerun()
-    with col2:
-        if st.button('',icon='❌'):
-            st.session_state.proceed_scraping = False
-            st.rerun()
-
 # Main Streamlit app
 def main():
     st.set_page_config(page_title="Website Scraper", page_icon="🕸️", layout="wide")
@@ -57,12 +44,7 @@ def main():
     
     # Step 2: Scraping Process
     if proceed:
-        if "proceed_scraping" not in st.session_state \
-            or st.session_state.get('proceed_scraping', False) == False:
-            confirmation_dialog()
 
-    # time.sleep(1)
-    if st.session_state.get("proceed_scraping", False):
         st.header("Step 2: Scraping Websites")
         
         # Initialize the scraper
