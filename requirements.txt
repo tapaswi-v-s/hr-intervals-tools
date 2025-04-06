@@ -1,0 +1,16 @@
+langchain-text-splitters
+langchain
+python-dotenv
+openai
+langchain-openai
+getpass4
+uuid
+beautifulsoup4
+requests
+firecrawl-py
+tqdm
+pinecone==5.4.0
+langchain-pinecone
+langchain-community
+streamlit
+langgraph
