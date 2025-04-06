@@ -11,8 +11,8 @@ def create_zip(json_files):
     return zip_path
 
 def main():
-    st.set_page_config(page_title="MD Embedder", page_icon="📄", layout="wide")
-    st.title("Markdown File Embedding Pipeline")
+    st.set_page_config(page_title="MD Embedder", page_icon="🔢", layout="wide")
+    st.title("Embedding Pipeline")
 
     # Step 1: File and API Key Upload
     with st.container(border=True):
