@@ -27,7 +27,7 @@ class PineconeManager:
             st.stop()
 
 def main():
-    st.set_page_config(page_title="Pinecone Ingest", page_icon="📊", layout="wide")
+    st.set_page_config(page_title="Pinecone Ingest", page_icon="💾", layout="wide")
     st.title("Pinecone DB Vector Ingestion")
 
     # Step 1: File and API Key Upload
