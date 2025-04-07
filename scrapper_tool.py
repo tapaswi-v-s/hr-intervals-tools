@@ -15,12 +15,39 @@ def download(file_name):
         height=0
     )
 
+footer = """
+<style>
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+}
+.footer a {
+    color: navy;
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+</style>
+<div class="footer">
+    <p>Developed by <strong><a href="https://www.linkedin.com/in/tapaswi-v-s/" target="_blank">Tapaswi</a></strong></p>
+</div>
+"""
+
 # Main Streamlit app
 def main():
     st.set_page_config(page_title="Website Scraper", page_icon="🕸️", layout="wide")
     
     st.title("Website Scraper using Firecrawl")
     st.write("This tool helps you scrape websites using Firecrawl API.")
+    st.markdown(footer, unsafe_allow_html=True)
     
     # Step 1: API Key and File Upload
     with st.container():

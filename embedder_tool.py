@@ -10,9 +10,36 @@ def create_zip(json_files):
             zipf.write(file, os.path.basename(file))
     return zip_path
 
+footer = """
+<style>
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 15px;
+}
+.footer a {
+    color: navy;
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+</style>
+<div class="footer">
+    <p>Developed by <strong><a href="https://www.linkedin.com/in/tapaswi-v-s/" target="_blank">Tapaswi</a></strong></p>
+</div>
+"""
+
 def main():
     st.set_page_config(page_title="MD Embedder", page_icon="🔢", layout="wide")
     st.title("Embedding Pipeline")
+    st.markdown(footer, unsafe_allow_html=True)
 
     # Step 1: File and API Key Upload
     with st.container(border=True):
