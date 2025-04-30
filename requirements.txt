@@ -7,7 +7,7 @@ getpass4
 uuid
 beautifulsoup4
 requests
-firecrawl-py
+firecrawl-py==1.15.0
 tqdm
 pinecone==5.4.0
 langchain-pinecone
